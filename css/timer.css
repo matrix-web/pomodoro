@@ -1,0 +1,101 @@
+.timer-wrapper {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  padding-top: 45px;
+}
+
+.timer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.timer-top {
+  display: flex;
+  align-items: center;
+  margin: 0 0 55px;
+}
+
+.timer__title {
+  margin-right: 30px;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--color-purple-50);
+}
+
+.timer__block {
+  position: relative;
+  width: 410px;
+  height: 410px;
+  margin-bottom: 50px;
+  border-radius: 50%;
+  background-image: linear-gradient(315deg, #2E325A 0%, #0E112A 100%);
+  box-shadow: -50px -50px 100px #272C5A, 50px 50px 100px #121530;
+}
+
+.timer__indicator {
+  transform: rotate(-90deg);
+}
+
+.timer__clock {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  font-size: 100px;
+  line-height: 1.24;
+  text-align: center;
+  letter-spacing: -5px;
+  color: var(--color-purple-50);
+  font-weight: 100;
+}
+
+.timer__indicator circle {
+  r: 205px;
+  cx: 50%;
+  cy: 50%;
+  stroke-dashoffset: 0;
+  stroke: var(--color-theme);
+  stroke-width: 11px;
+  stroke-dasharray: 1288.05px;
+  transition: stroke-dashoffset 1s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.timer__button {
+  position: absolute;
+  bottom: 25%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 15px;
+  color: var(--color-purple-50);
+  background-color: transparent;
+  border: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.4s ease-in;
+  outline: none;
+}
+
+.timer__button:hover {
+  color: rgb(177, 195, 255);
+}
+
+.timer__settings {
+  cursor: pointer;
+  background-color: transparent;
+  outline: none;
+  border: none;
+}
+
+.timer__settings svg {
+  display: inline-block;
+  vertical-align: middle;
+  width: 28px;
+  height: 28px;
+}

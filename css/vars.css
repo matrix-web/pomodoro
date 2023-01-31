@@ -1,0 +1,6 @@
+:root {
+  --kumbh-font: 'Kumbh Sans', sans-serif;
+  --roboto-slab: 'Roboto Slab', serif;
+  --space-mono: 'Arima', cursive;
+  --base-font: var(--kumbh-font);
+}

@@ -1,0 +1,105 @@
+/* INPUT NUMBER */
+
+.input-number {
+  position: relative;
+  max-width: 140px;
+}
+
+.input-number__field {
+  background-color: var(--color-purple-100);
+  border-radius: 10px;
+  width: 100%;
+  padding: 15px;
+  border: none;
+}
+
+.input-number__field::-webkit-outer-spin-button,
+.input-number__field::-webkit-inner-spin-button {
+	display: none;
+}
+
+.input-number__button {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.input-number__button svg {
+  pointer-events: none;
+}
+
+.input-number__button-up {
+  right: 15px;
+  top: 10px;
+}
+.input-number__button-down {
+  right: 15px;
+  bottom: 10px;
+}
+
+.input-number__label {
+  display: inline-block;
+  margin-bottom: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 15px;
+  color: #1E213F;
+  mix-blend-mode: normal;
+  opacity: 0.4;
+}
+
+.radio__field {
+  width: 0.1px;
+  height: 0.1px;
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+
+.radio__custom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--color-purple-100);
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 19px;
+  color: rgba(30, 33, 63, 0.73);
+  transition: 0.4s ease;
+  cursor: pointer;
+}
+
+.radio__custom-icon {
+  display: none;
+  width: 16px;
+  height: 16px;
+}
+
+.radio__custom--bg-red {
+  background-color: var(--color);
+}
+
+.radio__custom--bg-light-blue {
+  background-color: var(--color-light-blue);
+}
+
+.radio__custom--bg-purple {
+  background-color: var(--color-purple);
+}
+
+.radio__field.radio__field--checked:checked + .radio__custom {
+  background-color: var(--color-purple-600);
+  color: var(--color-white);
+}
+
+.radio__field--font-checked:checked + .radio__custom .radio__custom-icon {
+  display: block;
+}

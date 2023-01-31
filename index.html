@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/main.css">
+  <title>Pomodoro</title>
+</head>
+<body>
+  <div class="layout">
+    <div class="container">
+      <div class="timer-wrapper">
+        <section class="timer">
+          <div class="timer-top">
+            <h1 class="timer__title">Pomodoro</h1>
+            <div class="timer-bell hide" id="bell">
+              <div class="timer-bell__pulse">
+                <span></span>
+                <span></span>
+              </div>
+              <div class="timer-bell-icon-wrapper">
+                <svg class="timer-bell__icon">
+                  <use xlink:href="#bell" />
+                </svg>
+              </div>
+            </div>
+          </div>
+          <ul id="tabs" class="tabs">
+            <li class="tabs__item">
+              <label class="tab">
+                <input name="timer-type" class="tab__field tab__field--checked" type="radio" checked value="pomodoro" />
+                <span class="tab__custom" title="">Pomodoro</span>
+              </label>
+            </li>
+            <li class="tabs__item">
+              <label class="tab">
+                <input name="timer-type" class="tab__field tab__field--checked" type="radio" value="shortBreak" />
+                <span class="tab__custom" title="">Short break</span>
+              </label>
+            </li>
+            <li class="tabs__item">
+              <label class="tab">
+                <input name="timer-type" class="tab__field tab__field--checked" type="radio" value="longBreak" />
+                <span class="tab__custom" title="">Long break</span>
+              </label>
+            </li>
+          </ul>
+
+          <div class="timer__block">
+            <svg 
+              class="timer__indicator"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 500 500"
+            >
+            <circle 
+              id="timer-indicator"
+              stroke-linecap="round"
+              fill="transparent"
+            ></circle>
+          </svg>
+            <div class="timer__clock">
+              <span id="minute">00</span>
+              <span>:</span>
+              <span id="second">00</span>
+            </div>
+            <button id="timer-start-button" class="timer__button">Start</button>
+          </div>
+          <button id="button-settings" type="button" class="timer__settings">
+            <svg>
+              <use xlink:href="#settings" />
+            </svg>
+          </button>
+        </section>
+      </div>
+    </div>
+  </div>
+  <script type="module" src="./js/main.js"></script>
+</body>
+</html>

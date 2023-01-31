@@ -1,0 +1,117 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--base-font);
+}
+
+.layout {
+  min-height: 100vh;
+  background-color: var(--color-purple-700);
+}
+
+.container {
+  max-width: 1115px;
+  margin: 0 auto;
+  height: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+}
+
+.button {
+  padding: 16px 26px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: var(--color-white);
+  mix-blend-mode: normal;
+  border: none;
+  background-color: transparent;
+  border-radius: 27px;
+  cursor: pointer;
+  transition: 0.4s ease;
+  background-color: var(--color);
+}
+
+.hide {
+  display: none;
+}
+
+.timer-bell {
+  position: relative;
+  height: 32px;
+  width: 32px;
+  cursor: pointer;
+}
+
+.timer-bell__icon {
+  width: 32px;
+  height: 32px;
+}
+
+.timer-bell__pulse {
+  position: absolute;
+  left: 15px;
+  top: 15px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #00f2ff;
+  animation: pulse_animation 1.2s infinite;
+}
+
+.timer-bell__pulse span:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+.timer-bell-icon-wrapper {
+  z-index: 20;
+  position: absolute;
+  background: url('cord.svg') 0 0 no-repeat scroll;
+  -moz-animation: 1s ease 0s normal none infinite swing;
+  -moz-transform-origin: center top;
+  -webkit-animation:swing .6s infinite ease-in-out;
+  -webkit-transform-origin:top;
+}
+
+@keyframes pulse_animation {
+  0% { box-shadow: 0 0 0 0 rgba(52, 218, 255, 0.8) }
+  100% { box-shadow: 0 0 0 50px rgba(2, 169, 43, 0) }
+}
+
+@keyframes swing {
+  0%{transform:rotate(-4deg)}
+  50%{transform:rotate(4deg)}
+  100%{transform:rotate(-4deg)}
+}
+
+@-moz-keyframes swing {
+  0%{-moz-transform:rotate(-4deg)}
+  50%{-moz-transform:rotate(4deg)}
+  100%{-moz-transform:rotate(-4deg)}
+}
+@-webkit-keyframes swing {
+  0%{-webkit-transform:rotate(-4deg)}
+  50%{-webkit-transform:rotate(4deg)}
+  100%{-webkit-transform:rotate(-4deg)}
+}
